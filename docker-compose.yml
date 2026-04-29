@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  manuales-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-Manual2026*IBM}
+      - ADMIN_ACCESS_TOKEN=${ADMIN_ACCESS_TOKEN:-Access2026*Token}
+    restart: unless-stopped
+    container_name: manuales-app
