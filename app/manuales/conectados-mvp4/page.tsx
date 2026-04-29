@@ -12,6 +12,11 @@ import { UtilidadesSection } from './sections/UtilidadesSection';
 import { IncidenciasSection } from './sections/IncidenciasSection';
 import { PrestamosSection } from './sections/PrestamosSection';
 import { RenunciasSection } from './sections/RenunciasSection';
+import { CtsSection } from './sections/CtsSection';
+import { ConstanciaUtilidadesSection } from './sections/ConstanciaUtilidadesSection';
+import { VotacionesSection } from './sections/VotacionesSection';
+import { EncuestasSection } from './sections/EncuestasSection';
+
 
 const tocItems = [
   { id: 'introduccion', title: 'Introducción al Sistema', level: 2 },
@@ -19,9 +24,13 @@ const tocItems = [
   { id: 'justificaciones', title: 'II. Justificación de Inasistencias', level: 2 },
   { id: 'certificados', title: 'III. Certificados de Trabajo', level: 2 },
   { id: 'utilidades', title: 'IV. Utilidades para Personal Cesado', level: 2 },
-  { id: 'incidencias', title: 'V. Gestión de Incidencias (PCO)', level: 2 },
-  { id: 'prestamos', title: 'VI. Gestión de Préstamos (Gestor)', level: 2 },
-  { id: 'renuncias', title: 'VII. Gestión de Renuncias (Gestor)', level: 2 },
+  { id: 'renuncias', title: 'V. Gestión de Renuncias', level: 2 },
+  { id: 'cts', title: 'VI. CTS', level: 2 },
+  { id: 'contancia_utilidades', title: 'VII. Constancia de Utilidades', level: 2 },
+  { id: 'votaciones', title: 'VIII. Gestión de Votaciones', level: 2 },
+  { id: 'prestamos', title: 'IX. Gestión de Préstamos (Gestor)', level: 2 },  
+  { id: 'incidencias', title: 'X. Gestión de Incidencias (PCO)', level: 2 },
+  { id: 'encuestas', title: 'XI Encuestas', level: 2 },
 ];
 
 export default function ConectadosMvp4Manual() {
@@ -63,10 +72,13 @@ export default function ConectadosMvp4Manual() {
       <JustificacionesSection />
       <CertificadosSection />
       <UtilidadesSection />
-      <IncidenciasSection />
-      <PrestamosSection />
-      <RenunciasSection />
-
+       <RenunciasSection />
+       <CtsSection />
+       <ConstanciaUtilidadesSection />
+       <VotacionesSection />
+       <PrestamosSection />
+       <IncidenciasSection />
+       <EncuestasSection />
       <div className={`${carbon.layer01} p-4 mt-8 border-t ${carbon.border}`}>
         <p className={`text-sm ${carbon.textHelper} text-center`}>
           Manual de Usuario - Conectados 2.0 | Camposol S.A. | Versión 2.0 - 2026

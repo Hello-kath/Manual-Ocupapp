@@ -6,9 +6,9 @@ Este archivo lista las imágenes que faltan por capturar para completar el manua
 
 ## ✅ ESTADO ACTUAL
 
-**MVP cubierto:** MVP 4
-**Total de imágenes especificadas:** 43
-**Imágenes capturadas:** 0 / 43
+**MVP cubierto:** MVP 4 y MVP 5
+**Total de imágenes especificadas:** 59
+**Imágenes capturadas:** 0 / 59
 **Progreso:** 0%
 
 ---
@@ -78,16 +78,19 @@ Este archivo lista las imágenes que faltan por capturar para completar el manua
 ## 📅 PLANIFICACIÓN DE CAPTURA
 
 ### Fase 1: Permisos y Justificaciones
+
 **Prioridad:** Alta
 **Tests relacionados:** `01-aprobar-solicitud.spec.ts`, `02-historial-permisos.spec.ts`, `03-rechazar-solicitud.spec.ts`, `04-aprobar-justificacion.spec.ts`, `05-aprobar-parcial.spec.ts`, `06-rechazar-justificacion.spec.ts`
 **Imágenes:** 20
 
 ### Fase 2: Certificados y Utilidades
+
 **Prioridad:** Alta
 **Tests relacionados:** `07-historial-certificados.spec.ts`, `08-filtrar-solicitudes.spec.ts`, `09-exportar-reporte.spec.ts`, `10-carga-masiva-certificados.spec.ts`, `11-configurar-fecha-abono.spec.ts`, `12-filtrar-solicitudes.spec.ts`, `13-exportar-reporte-pagos.spec.ts`
 **Imágenes:** 20
 
 ### Fase 3: Notificaciones
+
 **Prioridad:** Media
 **Tests relacionados:** Transversal
 **Imágenes:** 3
@@ -108,6 +111,7 @@ Cuando se requiera extender el manual con módulos del MVP5, se deberá:
 6. **Capturar nuevas imágenes** durante ejecución de tests MVP5
 
 ### Módulos potenciales de MVP5 (a confirmar):
+
 - [ ] Por definir según desarrollo del MVP5
 - [ ] Por definir según desarrollo del MVP5
 - [ ] Por definir según desarrollo del MVP5
