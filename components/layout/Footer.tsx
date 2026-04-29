@@ -6,14 +6,14 @@ export function Footer() {
   const carbon = useCarbonClasses();
 
   return (
-    <footer className={`${carbon.layer02} mt-auto border-t ${carbon.border}`}>
-      <div className="container mx-auto px-6 py-8">
+    <footer className={`${carbon.layer02} mt-auto border-t border-camposol-primary-green/20`}>
+      <div className="container mx-auto px-6 py-6">
         <div className="text-center">
           <p className={`text-sm ${carbon.textPrimary}`}>
-            Sistema de Manuales de Usuario &copy; {new Date().getFullYear()}
+            Manual de Usuario — Conectados 2.0 &copy; {new Date().getFullYear()} Camposol S.A.
           </p>
-          <p className={`text-xs mt-2 ${carbon.textHelper}`}>
-            Documentación técnica para uso interno
+          <p className={`text-xs mt-1 ${carbon.textHelper}`}>
+            Desarrollado por TBBC
           </p>
         </div>
       </div>

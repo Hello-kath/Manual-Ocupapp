@@ -10,6 +10,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Camposol brand colors
+        'camposol-primary-green': '#61A60E',
+        'camposol-light-green': '#94C163',
+        'camposol-yellow-green': '#B2CC36',
+        'camposol-blue': '#006DB6',
+        'camposol-orange': '#FF6C0E',
+        'camposol-dark': '#231F20',
         // Escalas completas IBM Carbon Design System
         'ibm-blue': {
           10: '#edf5ff',
