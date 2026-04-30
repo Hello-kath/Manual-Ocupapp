@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { Briefcase, Upload, Calendar as CalendarIcon, FileSpreadsheet, Clock } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function UtilidadesSection() {
   const carbon = useCarbonClasses();
@@ -47,14 +48,11 @@ export function UtilidadesSection() {
                 <strong> Gestión de Utilidades</strong>.
               </p>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-acceso-analista.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista principal del módulo mostrando menú de gestión de utilidades
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-acceso-analista.png"
+                alt="Vista principal del módulo mostrando menú de gestión de utilidades"
+                caption="Vista principal del módulo mostrando menú de gestión de utilidades"
+              />
             </div>
 
             {/* Paso 2: Ver lista */}
@@ -78,14 +76,11 @@ export function UtilidadesSection() {
                 <li><strong>Estado:</strong> Pendiente, Certificado cargado, Fecha configurada, Procesado</li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-lista-solicitudes.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla mostrando todas las solicitudes con información completa y opciones de acción
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-lista-solicitudes.png"
+                alt="Tabla mostrando todas las solicitudes con información completa y opciones de acción"
+                caption="Tabla mostrando todas las solicitudes con información completa y opciones de acción"
+              />
             </div>
 
             {/* Paso 3: Carga masiva */}
@@ -122,34 +117,23 @@ export function UtilidadesSection() {
                 <li>Revisa el resumen de resultados</li>
               </ol>
 
-              <div className="space-y-4 mb-4">
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-carga-masiva-inicio.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Modal inicial mostrando botón para seleccionar archivo ZIP
-                  </p>
-                </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-carga-masiva-inicio.png"
+                alt="Modal inicial mostrando botón para seleccionar archivo ZIP"
+                caption="Modal inicial mostrando botón para seleccionar archivo ZIP"
+              />
 
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-seleccionar-zip.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Explorador de archivos mostrando archivo ZIP seleccionado
-                  </p>
-                </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-seleccionar-zip.png"
+                alt="Explorador de archivos mostrando archivo ZIP seleccionado"
+                caption="Explorador de archivos mostrando archivo ZIP seleccionado"
+              />
 
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-carga-progreso.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Barra de progreso mostrando porcentaje de carga (ej: 45%)
-                  </p>
-                </div>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-carga-progreso.png"
+                alt="Barra de progreso mostrando porcentaje de carga (ej: 45%)"
+                caption="Barra de progreso mostrando porcentaje de carga (ej: 45%)"
+              />
 
               <div className={`${carbon.layer01} p-4 border ${carbon.border} rounded-lg mb-4`}>
                 <p className={`text-sm font-semibold ${carbon.textPrimary} mb-3`}>
@@ -174,14 +158,11 @@ export function UtilidadesSection() {
                 </p>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-carga-exitosa.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Mensaje de éxito mostrando resumen de archivos procesados y errores
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-carga-exitosa.png"
+                alt="Mensaje de éxito mostrando resumen de archivos procesados y errores"
+                caption="Mensaje de éxito mostrando resumen de archivos procesados y errores"
+              />
             </div>
 
             {/* Paso 4: Verificar certificados */}
@@ -201,14 +182,11 @@ export function UtilidadesSection() {
                 <li>Notificaciones enviadas a los trabajadores</li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-certificados-asociados.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla actualizada con íconos de PDF verde indicando certificados asociados
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-certificados-asociados.png"
+                alt="Tabla actualizada con íconos de PDF verde indicando certificados asociados"
+                caption="Tabla actualizada con íconos de PDF verde indicando certificados asociados"
+              />
             </div>
 
             {/* Paso 5: Configurar fecha de abono */}
@@ -231,14 +209,11 @@ export function UtilidadesSection() {
                 <li>Haz clic en <strong>"Guardar"</strong></li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-configurar-fecha-abono.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de configuración con calendario y trabajadores seleccionados
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-configurar-fecha-abono.png"
+                alt="Modal de configuración con calendario y trabajadores seleccionados"
+                caption="Modal de configuración con calendario y trabajadores seleccionados"
+              />
 
               <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 dark:border-green-400 p-4 mb-4">
                 <p className={`text-sm ${carbon.textPrimary} mb-2`}>
@@ -250,14 +225,11 @@ export function UtilidadesSection() {
                 </p>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-fecha-abono-aplicada.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla actualizada mostrando fechas de abono configuradas
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-fecha-abono-aplicada.png"
+                alt="Tabla actualizada mostrando fechas de abono configuradas"
+                caption="Tabla actualizada mostrando fechas de abono configuradas"
+              />
             </div>
 
             {/* Paso 6: Filtrar solicitudes */}
@@ -299,25 +271,17 @@ export function UtilidadesSection() {
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-filtrar-estado.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Filtro por estado aplicado mostrando resultados filtrados
-                  </p>
-                </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-filtrar-estado.png"
+                alt="Filtro por estado aplicado mostrando resultados filtrados"
+                caption="Filtro por estado aplicado mostrando resultados filtrados"
+              />
 
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-filtrar-grupo-pago.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Filtro por grupo de pago mostrando trabajadores agrupados
-                  </p>
-                </div>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-filtrar-grupo-pago.png"
+                alt="Filtro por grupo de pago mostrando trabajadores agrupados"
+                caption="Filtro por grupo de pago mostrando trabajadores agrupados"
+              />
             </div>
 
             {/* Paso 7: Exportar reporte */}
@@ -351,25 +315,17 @@ export function UtilidadesSection() {
                 </ul>
               </div>
 
-              <div className="space-y-4">
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-exportar-reporte-pagos.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Opciones de exportación con formatos disponibles
-                  </p>
-                </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-exportar-reporte-pagos.png"
+                alt="Opciones de exportación con formatos disponibles"
+                caption="Opciones de exportación con formatos disponibles"
+              />
 
-                <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                  <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                    🖼️ Imagen: <code>utilidades-reporte-excel-abierto.png</code>
-                  </p>
-                  <p className={`text-sm ${carbon.textHelper}`}>
-                    Archivo Excel descargado mostrando datos formateados
-                  </p>
-                </div>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-reporte-excel-abierto.png"
+                alt="Archivo Excel descargado mostrando datos formateados"
+                caption="Archivo Excel descargado mostrando datos formateados"
+              />
             </div>
 
             {/* Paso 8: Historial */}
@@ -391,14 +347,11 @@ export function UtilidadesSection() {
                 <li><strong>Errores:</strong> Archivos que no pudieron procesarse</li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>utilidades-historial-cargas.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla de historial mostrando todas las cargas masivas con resultados
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/utilidades/utilidades-historial-cargas.png"
+                alt="Tabla de historial mostrando todas las cargas masivas con resultados"
+                caption="Tabla de historial mostrando todas las cargas masivas con resultados"
+              />
             </div>
 
             {/* Resumen de flujo */}

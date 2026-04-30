@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { LogOut, CheckCircle, XCircle, Filter } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function RenunciasSection() {
   const carbon = useCarbonClasses();
@@ -18,7 +19,7 @@ export function RenunciasSection() {
         <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
           <div className="flex items-center gap-3">
             <LogOut className="w-6 h-6 text-red-600 dark:text-red-400" />
-            <span>VII. Gestión de Renuncias (Gestor)</span>
+            <span>XI. Gestión de Renuncias (Gestor)</span>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -54,14 +55,11 @@ export function RenunciasSection() {
                   <li>Opción de filtros avanzados</li>
                 </ul>
               </div>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>renuncias-bandeja-solicitudes.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Bandeja con listado de solicitudes de renuncia pendientes
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/renuncias/renuncias-bandeja-solicitudes.png"
+                alt="Bandeja con listado de solicitudes de renuncia pendientes"
+                caption="Bandeja con listado de solicitudes de renuncia pendientes"
+              />
             </div>
 
             {/* Paso 2: Buscar por DNI */}
@@ -118,14 +116,11 @@ export function RenunciasSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>renuncias-modal-aprobacion.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de aprobación con campos de Fecha de Cese, Tipo y Comentario
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/renuncias/renuncias-modal-aprobacion.png"
+                alt="Modal de aprobación con campos de Fecha de Cese, Tipo y Comentario"
+                caption="Modal de aprobación con campos de Fecha de Cese, Tipo y Comentario"
+              />
             </div>
 
             {/* Paso 4: Rechazar */}
@@ -145,14 +140,11 @@ export function RenunciasSection() {
                 <li>Haz clic en <strong>"Aceptar"</strong> para confirmar</li>
                 <li>El modal se cierra y la solicitud desaparece de la bandeja</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>renuncias-modal-rechazo.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de rechazo con campo de comentario obligatorio
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/renuncias/renuncias-modal-rechazo.png"
+                alt="Modal de rechazo con campo de comentario obligatorio"
+                caption="Modal de rechazo con campo de comentario obligatorio"
+              />
             </div>
 
             {/* Paso 5: Filtros avanzados */}
@@ -171,14 +163,11 @@ export function RenunciasSection() {
                 <li>Haz clic en <strong>"Aplicar"</strong></li>
                 <li>La tabla mostrará únicamente los registros que coincidan con el DNI</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>renuncias-filtros-avanzados.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Panel de filtros avanzados con campo DNI y botón Aplicar
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/renuncias/renuncias-filtros-avanzados.png"
+                alt="Panel de filtros avanzados con campo DNI y botón Aplicar"
+                caption="Panel de filtros avanzados con campo DNI y botón Aplicar"
+              />
             </div>
 
             {/* Estados */}

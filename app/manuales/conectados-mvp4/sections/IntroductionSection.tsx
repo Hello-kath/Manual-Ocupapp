@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { Info, Users, FileCheck, Calendar, Briefcase } from 'lucide-react';
+import { Info, Users, FileCheck, Calendar, Briefcase, BookOpen } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 
 export function IntroductionSection() {
@@ -16,7 +16,10 @@ export function IntroductionSection() {
     <Accordion type="single" collapsible className="mb-6">
       <AccordionItem value="introduction">
         <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
-          Introducción al Sistema Conectados 2.0
+          <div className="flex items-center gap-3">
+            <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <span>Introducción al Sistema Conectados 2.0</span>
+          </div>
         </AccordionTrigger>
         <AccordionContent>
           <section id="introduccion" className="space-y-6 pt-4">

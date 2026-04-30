@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { Users, FileText, Filter, Download } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function CertificadosSection() {
   const carbon = useCarbonClasses();
@@ -47,14 +48,11 @@ export function CertificadosSection() {
                 <strong> Certificados de Trabajo</strong>.
               </p>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-acceso-admin.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista principal del módulo de certificados con menú de navegación
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-acceso-admin.png"
+                alt="Vista principal del módulo de certificados con menú de navegación"
+                caption="Vista principal del módulo de certificados con menú de navegación"
+              />
             </div>
 
             {/* Paso 2: Historial */}
@@ -77,14 +75,11 @@ export function CertificadosSection() {
                 <li><strong>Fecha de descarga:</strong> Cuándo el trabajador lo descargó</li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-historial-solicitudes.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla de historial mostrando todas las solicitudes con estados y fechas
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-historial-solicitudes.png"
+                alt="Tabla de historial mostrando todas las solicitudes con estados y fechas"
+                caption="Tabla de historial mostrando todas las solicitudes con estados y fechas"
+              />
             </div>
 
             {/* Paso 3: Ver detalle */}
@@ -110,14 +105,11 @@ export function CertificadosSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-detalle-solicitud.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista de detalle con información completa y opción de descarga
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-detalle-solicitud.png"
+                alt="Vista de detalle con información completa y opción de descarga"
+                caption="Vista de detalle con información completa y opción de descarga"
+              />
             </div>
 
             {/* Paso 4: Filtrar */}
@@ -177,14 +169,11 @@ export function CertificadosSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-filtrar-por-estado.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Filtros aplicados mostrando solo solicitudes en estado "Generado"
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-filtrar-por-estado.png"
+                alt="Filtros aplicados mostrando solo solicitudes en estado &quot;Generado&quot;"
+                caption="Filtros aplicados mostrando solo solicitudes en estado &quot;Generado&quot;"
+              />
             </div>
 
             {/* Paso 5: Notificaciones */}
@@ -206,14 +195,11 @@ export function CertificadosSection() {
                 </p>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-notificacion-generado.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Notificación de certificado generado con opción de descarga
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-notificacion-generado.png"
+                alt="Notificación de certificado generado con opción de descarga"
+                caption="Notificación de certificado generado con opción de descarga"
+              />
             </div>
 
             {/* Paso 6: Exportar reporte */}
@@ -245,14 +231,11 @@ export function CertificadosSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>certificados-exportar-reporte.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Opciones de exportación y archivo descargándose
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/certificados/certificados-exportar-reporte.png"
+                alt="Opciones de exportación y archivo descargándose"
+                caption="Opciones de exportación y archivo descargándose"
+              />
             </div>
 
             {/* Estados */}

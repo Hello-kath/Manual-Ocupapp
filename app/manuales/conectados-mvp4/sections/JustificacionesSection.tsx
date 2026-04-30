@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { FileCheck, CheckCircle, AlertCircle, Bell } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function JustificacionesSection() {
   const carbon = useCarbonClasses();
@@ -56,14 +57,11 @@ export function JustificacionesSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-bandeja-pendientes.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Bandeja mostrando justificaciones pendientes con columnas: Colaborador, Fecha inasistencia, Tipo, Estado
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-bandeja-pendientes.png"
+                alt="Bandeja mostrando justificaciones pendientes con columnas: Colaborador, Fecha inasistencia, Tipo, Estado"
+                caption="Bandeja mostrando justificaciones pendientes con columnas: Colaborador, Fecha inasistencia, Tipo, Estado"
+              />
             </div>
 
             {/* Paso 2: Revisar detalle */}
@@ -85,23 +83,17 @@ export function JustificacionesSection() {
                 <li>Fechas de inicio y fin <strong className="text-yellow-600 dark:text-yellow-400">EDITABLES</strong></li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-detalle-completo.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista de detalle mostrando toda la información y campos de fecha editables
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-detalle-completo.png"
+                alt="Vista de detalle mostrando toda la información y campos de fecha editables"
+                caption="Vista de detalle mostrando toda la información y campos de fecha editables"
+              />
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-documento-sustento.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Documento de sustento (certificado médico, carta, etc.) visualizado en pantalla
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-documento-sustento.png"
+                alt="Documento de sustento (certificado médico, carta, etc.) visualizado en pantalla"
+                caption="Documento de sustento (certificado médico, carta, etc.) visualizado en pantalla"
+              />
             </div>
 
             {/* Paso 3: Aprobar sin modificar fechas */}
@@ -122,14 +114,11 @@ export function JustificacionesSection() {
                 <li>Confirma la aprobación</li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-aprobar-normal.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de aprobación con fechas originales sin modificar
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-aprobar-normal.png"
+                alt="Modal de aprobación con fechas originales sin modificar"
+                caption="Modal de aprobación con fechas originales sin modificar"
+              />
 
               <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 dark:border-green-400 p-4">
                 <div className="flex items-start gap-3">
@@ -166,14 +155,11 @@ export function JustificacionesSection() {
                 <li>Confirma la aprobación</li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-modificar-fechas.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Campos de fecha siendo modificados con advertencia visual de cambio
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-modificar-fechas.png"
+                alt="Campos de fecha siendo modificados con advertencia visual de cambio"
+                caption="Campos de fecha siendo modificados con advertencia visual de cambio"
+              />
 
               <div className="bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500 dark:border-orange-400 p-4 mb-4">
                 <div className="flex items-start gap-3">
@@ -210,14 +196,11 @@ export function JustificacionesSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-aprobado-parcial.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Confirmación mostrando estado APROBADO PARCIAL con fechas originales vs. aprobadas
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-aprobado-parcial.png"
+                alt="Confirmación mostrando estado APROBADO PARCIAL con fechas originales vs. aprobadas"
+                caption="Confirmación mostrando estado APROBADO PARCIAL con fechas originales vs. aprobadas"
+              />
             </div>
 
             {/* Paso 5: Rechazar justificación */}
@@ -252,23 +235,17 @@ export function JustificacionesSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-rechazar-sin-comentario.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Validación mostrando error al intentar rechazar sin escribir comentario
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-rechazar-sin-comentario.png"
+                alt="Validación mostrando error al intentar rechazar sin escribir comentario"
+                caption="Validación mostrando error al intentar rechazar sin escribir comentario"
+              />
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-rechazo-con-comentario.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de rechazo con comentario escrito y botón habilitado
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-rechazo-con-comentario.png"
+                alt="Modal de rechazo con comentario escrito y botón habilitado"
+                caption="Modal de rechazo con comentario escrito y botón habilitado"
+              />
 
               <div className={`${carbon.layer01} p-4 border ${carbon.border} rounded-lg mt-4`}>
                 <p className={`text-sm font-semibold ${carbon.textPrimary} mb-2`}>Ejemplos de comentarios válidos:</p>
@@ -323,14 +300,11 @@ export function JustificacionesSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mt-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>justificaciones-notificacion-enviada.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Confirmación de notificación enviada al colaborador
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/justificaciones/justificaciones-notificacion-enviada.png"
+                alt="Confirmación de notificación enviada al colaborador"
+                caption="Confirmación de notificación enviada al colaborador"
+              />
             </div>
 
             {/* Resumen de estados */}

@@ -9,6 +9,7 @@ import {
 import { Calendar, CheckCircle, XCircle, AlertTriangle } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import Image from 'next/image';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function PermisosSection() {
   const carbon = useCarbonClasses();
@@ -34,14 +35,11 @@ export function PermisosSection() {
               <p className={`${carbon.textPrimary} mb-4`}>
                 Inicia sesión en el sistema Conectados 2.0 con tus credenciales de aprobador.
               </p>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-login-aprobador.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Pantalla de login del sistema mostrando campos de usuario y contraseña
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-login-aprobador.png"
+                alt="Pantalla de login del sistema mostrando campos de usuario y contraseña"
+                caption="Pantalla de login del sistema mostrando campos de usuario y contraseña"
+              />
             </div>
 
             {/* Paso 2: Bandeja de solicitudes */}
@@ -65,14 +63,11 @@ export function PermisosSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-bandeja-solicitudes.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Tabla mostrando solicitudes pendientes con columnas: Colaborador, Tipo, Fecha, Estado
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-bandeja-solicitudes.png"
+                alt="Tabla mostrando solicitudes pendientes con columnas: Colaborador, Tipo, Fecha, Estado"
+                caption="Tabla mostrando solicitudes pendientes con columnas: Colaborador, Tipo, Fecha, Estado"
+              />
 
               <div className={`${carbon.layer01} p-4 border ${carbon.border} rounded-lg`}>
                 <p className={`text-sm font-semibold ${carbon.textPrimary} mb-2`}>Información visible en la tabla:</p>
@@ -98,14 +93,11 @@ export function PermisosSection() {
                 Se abrirá un modal o vista con la información completa.
               </p>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-detalle-solicitud.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal mostrando información completa del colaborador, tipo de permiso, fechas, motivo y adjuntos
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-detalle-solicitud.png"
+                alt="Modal mostrando información completa del colaborador, tipo de permiso, fechas, motivo y adjuntos"
+                caption="Modal mostrando información completa del colaborador, tipo de permiso, fechas, motivo y adjuntos"
+              />
 
               <div className={`${carbon.layer01} p-4 border ${carbon.border} rounded-lg mb-4`}>
                 <p className={`text-sm font-semibold ${carbon.textPrimary} mb-2`}>Información del detalle:</p>
@@ -118,14 +110,11 @@ export function PermisosSection() {
                 </ul>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-documento-adjunto.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Documento PDF adjunto visualizado (certificado médico, comprobante, etc.)
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-documento-adjunto.png"
+                alt="Documento PDF adjunto visualizado (certificado médico, comprobante, etc.)"
+                caption="Documento PDF adjunto visualizado (certificado médico, comprobante, etc.)"
+              />
             </div>
 
             {/* Paso 4: Aprobar solicitud */}
@@ -145,14 +134,11 @@ export function PermisosSection() {
                 <li>Haz clic en <strong>"Confirmar"</strong></li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-aprobar-modal.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de confirmación de aprobación con campo de comentarios opcional
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-aprobar-modal.png"
+                alt="Modal de confirmación de aprobación con campo de comentarios opcional"
+                caption="Modal de confirmación de aprobación con campo de comentarios opcional"
+              />
 
               <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 dark:border-green-400 p-4 mb-4">
                 <div className="flex items-start gap-3">
@@ -171,14 +157,11 @@ export function PermisosSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-aprobacion-exitosa.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Mensaje de confirmación exitosa mostrando estado APROBADO
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-aprobacion-exitosa.png"
+                alt="Mensaje de confirmación exitosa mostrando estado APROBADO"
+                caption="Mensaje de confirmación exitosa mostrando estado APROBADO"
+              />
             </div>
 
             {/* Paso 5: Rechazar solicitud */}
@@ -198,14 +181,11 @@ export function PermisosSection() {
                 <li>Haz clic en <strong>"Confirmar rechazo"</strong></li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-rechazar-modal.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de rechazo con campo de comentario obligatorio
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-rechazar-modal.png"
+                alt="Modal de rechazo con campo de comentario obligatorio"
+                caption="Modal de rechazo con campo de comentario obligatorio"
+              />
 
               <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 dark:border-red-400 p-4 mb-4">
                 <div className="flex items-start gap-3">
@@ -222,14 +202,11 @@ export function PermisosSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-validacion-comentario.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Mensaje de error si se intenta rechazar sin escribir comentario
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-validacion-comentario.png"
+                alt="Mensaje de error si se intenta rechazar sin escribir comentario"
+                caption="Mensaje de error si se intenta rechazar sin escribir comentario"
+              />
             </div>
 
             {/* Paso 6: Historial y reportes */}
@@ -243,14 +220,11 @@ export function PermisosSection() {
                 y exportar reportes para análisis.
               </p>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-historial-completo.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista de historial mostrando todas las solicitudes con filtros disponibles
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-historial-completo.png"
+                alt="Vista de historial mostrando todas las solicitudes con filtros disponibles"
+                caption="Vista de historial mostrando todas las solicitudes con filtros disponibles"
+              />
 
               <h4 className={`text-lg font-semibold ${carbon.textPrimary} mb-3 mt-6`}>
                 Aplicar Filtros
@@ -265,14 +239,11 @@ export function PermisosSection() {
                 <li><strong>Por tipo de permiso:</strong> Personal, médico, estudios, etc.</li>
               </ul>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg mb-4`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-filtros-aplicados.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Filtros activos mostrando resultados filtrados en la tabla
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-filtros-aplicados.png"
+                alt="Filtros activos mostrando resultados filtrados en la tabla"
+                caption="Filtros activos mostrando resultados filtrados en la tabla"
+              />
 
               <h4 className={`text-lg font-semibold ${carbon.textPrimary} mb-3 mt-6`}>
                 Exportar Reportes
@@ -287,14 +258,11 @@ export function PermisosSection() {
                 <li>El archivo se descargará automáticamente</li>
               </ol>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>permisos-exportar-reporte.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Opciones de exportación y archivo descargándose
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/permisos/permisos-exportar-reporte.png"
+                alt="Opciones de exportación y archivo descargándose"
+                caption="Opciones de exportación y archivo descargándose"
+              />
             </div>
 
             {/* Resumen de flujo */}

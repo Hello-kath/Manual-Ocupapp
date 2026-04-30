@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { CreditCard, CheckCircle, XCircle, History } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function PrestamosSection() {
   const carbon = useCarbonClasses();
@@ -18,7 +19,7 @@ export function PrestamosSection() {
         <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
           <div className="flex items-center gap-3">
             <CreditCard className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-            <span>VI. Gestión de Préstamos (Gestor)</span>
+            <span>X. Gestión de Préstamos (Gestor)</span>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -54,14 +55,11 @@ export function PrestamosSection() {
                   <li>Botones de <strong>Aprobar</strong> y <strong>Rechazar</strong> por cada fila</li>
                 </ul>
               </div>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>prestamos-panel-aprobaciones.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Panel con pestañas de tipo de préstamo y tabla de solicitudes pendientes
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/prestamos/prestamos-panel-aprobaciones.png"
+                alt="Panel con pestañas de tipo de préstamo y tabla de solicitudes pendientes"
+                caption="Panel con pestañas de tipo de préstamo y tabla de solicitudes pendientes"
+              />
             </div>
 
             {/* Paso 2: Navegar entre tipos */}
@@ -97,14 +95,11 @@ export function PrestamosSection() {
                 <li>Verifica los campos: <strong>DNI</strong>, <strong>Monto</strong>, estado <strong>"Por aprobar"</strong> y demás datos</li>
                 <li>Haz clic en <strong>"Volver"</strong> para cerrar el modal</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>prestamos-modal-detalle.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal con DNI, Monto y estado "Por aprobar"
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/prestamos/prestamos-modal-detalle.png"
+                alt="Modal con DNI, Monto y estado &quot;Por aprobar&quot;"
+                caption="Modal con DNI, Monto y estado &quot;Por aprobar&quot;"
+              />
             </div>
 
             {/* Paso 4: Aprobar */}
@@ -125,14 +120,11 @@ export function PrestamosSection() {
                 <li>Aparecerá un mensaje de éxito (toast verde)</li>
                 <li>La solicitud <strong>desaparece de la bandeja</strong> de pendientes</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>prestamos-modal-aprobacion.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de aprobación con campo de comentario y botón de confirmación
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/prestamos/prestamos-modal-aprobacion.png"
+                alt="Modal de aprobación con campo de comentario y botón de confirmación"
+                caption="Modal de aprobación con campo de comentario y botón de confirmación"
+              />
             </div>
 
             {/* Paso 5: Rechazar */}
@@ -162,14 +154,11 @@ export function PrestamosSection() {
                 </p>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>prestamos-modal-rechazo.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de rechazo con textarea de motivo y botón "Rechazar" habilitado
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/prestamos/prestamos-modal-rechazo.png"
+                alt="Modal de rechazo con textarea de motivo y botón &quot;Rechazar&quot; habilitado"
+                caption="Modal de rechazo con textarea de motivo y botón &quot;Rechazar&quot; habilitado"
+              />
             </div>
 
             {/* Paso 6: Historial */}
@@ -207,14 +196,11 @@ export function PrestamosSection() {
                 </div>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>prestamos-historial-kpis.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista del historial con tarjetas KPI y tabla de solicitudes procesadas
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/prestamos/prestamos-historial-kpis.png"
+                alt="Vista del historial con tarjetas KPI y tabla de solicitudes procesadas"
+                caption="Vista del historial con tarjetas KPI y tabla de solicitudes procesadas"
+              />
             </div>
 
             {/* Estados */}

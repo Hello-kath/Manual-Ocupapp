@@ -4,24 +4,34 @@ import { ManualLayout } from '@/components/layout/ManualLayout';
 import { TableOfContents } from '@/components/manual/TableOfContents';
 import { Layers } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { LoginSection } from './sections/LoginSection';
 import { IntroductionSection } from './sections/IntroductionSection';
 import { PermisosSection } from './sections/PermisosSection';
 import { JustificacionesSection } from './sections/JustificacionesSection';
 import { CertificadosSection } from './sections/CertificadosSection';
 import { UtilidadesSection } from './sections/UtilidadesSection';
+import { CtsSection } from './sections/CtsSection';
+import { ConstanciaUtilidadesSection } from './sections/ConstanciaUtilidadesSection';
+import { EncuestasSection } from './sections/EncuestasSection';
+import { VotacionesSection } from './sections/VotacionesSection';
 import { IncidenciasSection } from './sections/IncidenciasSection';
 import { PrestamosSection } from './sections/PrestamosSection';
 import { RenunciasSection } from './sections/RenunciasSection';
 
 const tocItems = [
+  { id: 'login', title: 'Inicio de Sesión', level: 2 },
   { id: 'introduccion', title: 'Introducción al Sistema', level: 2 },
   { id: 'permisos', title: 'I. Gestión de Permisos', level: 2 },
   { id: 'justificaciones', title: 'II. Justificación de Inasistencias', level: 2 },
   { id: 'certificados', title: 'III. Certificados de Trabajo', level: 2 },
   { id: 'utilidades', title: 'IV. Utilidades para Personal Cesado', level: 2 },
-  { id: 'incidencias', title: 'V. Gestión de Incidencias (PCO)', level: 2 },
-  { id: 'prestamos', title: 'VI. Gestión de Préstamos (Gestor)', level: 2 },
-  { id: 'renuncias', title: 'VII. Gestión de Renuncias (Gestor)', level: 2 },
+  { id: 'cts', title: 'V. CTS - Carga Masiva de Certificados', level: 2 },
+  { id: 'constancias', title: 'VI. Constancias - Historial de Utilidades', level: 2 },
+  { id: 'encuestas', title: 'VII. Gestión de Encuestas', level: 2 },
+  { id: 'votaciones', title: 'VIII. Gestión de Votaciones', level: 2 },
+  { id: 'incidencias', title: 'IX. Gestión de Incidencias (PCO)', level: 2 },
+  { id: 'prestamos', title: 'X. Gestión de Préstamos (Gestor)', level: 2 },
+  { id: 'renuncias', title: 'XI. Gestión de Renuncias (Gestor)', level: 2 },
 ];
 
 export default function ConectadosMvp4Manual() {
@@ -47,22 +57,27 @@ export default function ConectadosMvp4Manual() {
           <strong>Módulos MVP4:</strong> Permisos, Justificaciones, Certificados, Utilidades
         </p>
         <p className={`${carbon.textPrimary} text-sm`}>
-          <strong>Módulos MVP5:</strong> Incidencias, Préstamos, Renuncias
+          <strong>Módulos MVP5:</strong> CTS, Constancias, Encuestas, Votaciones, Incidencias, Préstamos, Renuncias
         </p>
       </div>
 
       <p className={`${carbon.textSecondary} text-lg mb-8`}>
-        Guía completa para gestionar permisos, justificaciones, certificados, utilidades,
-        incidencias, préstamos y renuncias en el sistema Conectados 2.0.
+        Guía completa para gestionar permisos, justificaciones, certificados, utilidades, CTS,
+        constancias, encuestas, votaciones, incidencias, préstamos y renuncias en el sistema Conectados 2.0.
       </p>
 
       <TableOfContents items={tocItems} />
 
+      <LoginSection />
       <IntroductionSection />
       <PermisosSection />
       <JustificacionesSection />
       <CertificadosSection />
       <UtilidadesSection />
+      <CtsSection />
+      <ConstanciaUtilidadesSection />
+      <EncuestasSection />
+      <VotacionesSection />
       <IncidenciasSection />
       <PrestamosSection />
       <RenunciasSection />

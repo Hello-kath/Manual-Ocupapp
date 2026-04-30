@@ -8,6 +8,7 @@ import {
 } from '@/components/ui/accordion';
 import { AlertCircle, Search, Filter, MessageSquare, CheckSquare } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
+import { ManualImage } from '@/components/manual/ManualImage';
 
 export function IncidenciasSection() {
   const carbon = useCarbonClasses();
@@ -18,7 +19,7 @@ export function IncidenciasSection() {
         <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
           <div className="flex items-center gap-3">
             <AlertCircle className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-            <span>V. Gestión de Incidencias y Sugerencias (PCO)</span>
+            <span>IX. Gestión de Incidencias y Sugerencias (PCO)</span>
           </div>
         </AccordionTrigger>
         <AccordionContent>
@@ -54,14 +55,11 @@ export function IncidenciasSection() {
                   <li>Botón <strong>"Nueva respuesta"</strong> (deshabilitado hasta seleccionar registros)</li>
                 </ul>
               </div>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-panel-principal.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Vista del panel con tabla de incidencias y campo de búsqueda
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-panel-principal.png"
+                alt="Vista del panel con tabla de incidencias y campo de búsqueda"
+                caption="Vista del panel con tabla de incidencias y campo de búsqueda"
+              />
             </div>
 
             {/* Paso 2: Búsqueda rápida */}
@@ -79,14 +77,11 @@ export function IncidenciasSection() {
                 <li>Presiona <strong>Enter</strong> para aplicar la búsqueda</li>
                 <li>La tabla mostrará únicamente los resultados que coincidan</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-busqueda-rapida.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Campo de búsqueda con resultado filtrado en la tabla
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-busqueda-rapida.png"
+                alt="Campo de búsqueda con resultado filtrado en la tabla"
+                caption="Campo de búsqueda con resultado filtrado en la tabla"
+              />
             </div>
 
             {/* Paso 3: Filtros avanzados */}
@@ -105,14 +100,11 @@ export function IncidenciasSection() {
                 <li>Haz clic en <strong>"Aplicar"</strong></li>
                 <li>La tabla se actualizará mostrando solo los resultados filtrados</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-filtros-avanzados.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Panel lateral de filtros avanzados con campos de búsqueda
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-filtros-avanzados.png"
+                alt="Panel lateral de filtros avanzados con campos de búsqueda"
+                caption="Panel lateral de filtros avanzados con campos de búsqueda"
+              />
             </div>
 
             {/* Paso 4: Ver detalle */}
@@ -131,14 +123,11 @@ export function IncidenciasSection() {
                 <li>Revisa el contenido del reporte</li>
                 <li>Haz clic en <strong>"Volver"</strong> para cerrar el modal</li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-modal-detalle.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal de "Información Adicional" con datos completos de la incidencia
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-modal-detalle.png"
+                alt="Modal de &quot;Información Adicional&quot; con datos completos de la incidencia"
+                caption="Modal de &quot;Información Adicional&quot; con datos completos de la incidencia"
+              />
             </div>
 
             {/* Paso 5: Responder individual */}
@@ -160,14 +149,11 @@ export function IncidenciasSection() {
                 <li>Haz clic en <strong>"Guardar"</strong></li>
                 <li>La incidencia cambiará su estado a <span className="bg-green-600 text-white px-2 py-0.5 rounded text-xs font-semibold">Abordado</span></li>
               </ol>
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-modal-respuesta.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Modal "Gestión de Incidencia" con campo de texto y contador de caracteres
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-modal-respuesta.png"
+                alt="Modal &quot;Gestión de Incidencia&quot; con campo de texto y contador de caracteres"
+                caption="Modal &quot;Gestión de Incidencia&quot; con campo de texto y contador de caracteres"
+              />
             </div>
 
             {/* Paso 6: Respuesta masiva */}
@@ -196,14 +182,11 @@ export function IncidenciasSection() {
                 </p>
               </div>
 
-              <div className={`${carbon.surface} p-4 border ${carbon.border} rounded-lg`}>
-                <p className={`text-sm font-mono ${carbon.textPrimary} mb-2`}>
-                  🖼️ Imagen: <code>incidencias-respuesta-masiva.png</code>
-                </p>
-                <p className={`text-sm ${carbon.textHelper}`}>
-                  Múltiples checkboxes seleccionados con botón "Nueva respuesta" habilitado
-                </p>
-              </div>
+              <ManualImage
+                src="/manuales/incidencias/incidencias-respuesta-masiva.png"
+                alt="Múltiples checkboxes seleccionados con botón &quot;Nueva respuesta&quot; habilitado"
+                caption="Múltiples checkboxes seleccionados con botón &quot;Nueva respuesta&quot; habilitado"
+              />
             </div>
 
             {/* Estados */}
