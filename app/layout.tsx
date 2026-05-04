@@ -3,8 +3,11 @@ import "./globals.css";
 import { ClientProviders } from "@/components/providers/ClientProviders";
 
 export const metadata: Metadata = {
-  title: "Manual de Usuario - Conectados 2.0 | Camposol",
-  description: "Manual de usuario del sistema Conectados 2.0 de Camposol S.A.",
+  title: "Manual de Usuario - Fontur",
+  description: "Manual de usuario para la plataforma Fontur",
+  icons: {
+    icon: '/fontur-logo.png',
+  },
 };
 
 export default function RootLayout({
