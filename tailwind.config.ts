@@ -93,6 +93,12 @@ const config: Config = {
           90: '#31135e',
           100: '#1c0f30',
         },
+        // Fontur brand colors
+        'fontur-purple': '#7B2D8B',
+        'fontur-purple-light': '#a855f7',
+        'fontur-green': '#2E9E3A',
+        'fontur-yellow': '#F5A623',
+        'fontur-blue': '#1A6BB5',
         // Mapeo a nombres estándar de Tailwind
         blue: {
           50: '#edf5ff',
