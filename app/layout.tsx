@@ -3,10 +3,10 @@ import "./globals.css";
 import { ClientProviders } from "@/components/providers/ClientProviders";
 
 export const metadata: Metadata = {
-  title: "Manual de Usuario - Fontur",
-  description: "Manual de usuario para la plataforma Fontur",
+  title: "Manual de Usuario - Ocupapp",
+  description: "Manual de usuario de Ocupapp — gestión de ocupación y asignación de horas de The Bitbang Company",
   icons: {
-    icon: '/fontur-logo.png',
+    icon: '/tbbc-logo.png',
   },
 };
 

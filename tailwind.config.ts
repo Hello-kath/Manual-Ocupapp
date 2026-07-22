@@ -13,13 +13,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Camposol brand colors
-        'camposol-primary-green': '#61A60E',
-        'camposol-light-green': '#94C163',
-        'camposol-yellow-green': '#B2CC36',
-        'camposol-blue': '#006DB6',
-        'camposol-orange': '#FF6C0E',
-        'camposol-dark': '#231F20',
+        // Ocupapp brand colors — "Mystic Corporate" design system
+        'ocupapp-primary': '#22043d',        // Deep Indigo
+        'ocupapp-purple': '#4a116f',         // Royal Purple (acento principal)
+        'ocupapp-purple-light': '#a855f7',   // acento para modo oscuro
+        'ocupapp-magenta': '#83146f',        // Magenta Dusk (terciario)
         // Escalas completas IBM Carbon Design System
         'ibm-blue': {
           10: '#edf5ff',
@@ -93,12 +91,6 @@ const config: Config = {
           90: '#31135e',
           100: '#1c0f30',
         },
-        // Fontur brand colors
-        'fontur-purple': '#7B2D8B',
-        'fontur-purple-light': '#a855f7',
-        'fontur-green': '#2E9E3A',
-        'fontur-yellow': '#F5A623',
-        'fontur-blue': '#1A6BB5',
         // Mapeo a nombres estándar de Tailwind
         blue: {
           50: '#edf5ff',

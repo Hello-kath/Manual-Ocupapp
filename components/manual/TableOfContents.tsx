@@ -32,9 +32,9 @@ export function TableOfContents({ items }: TableOfContentsProps) {
   };
 
   return (
-    <nav className="bg-purple-50 dark:bg-purple-900/20 border border-fontur-purple dark:border-fontur-purple-light rounded-lg p-6 mb-8">
+    <nav className="bg-purple-50 dark:bg-purple-900/20 border border-ocupapp-purple dark:border-ocupapp-purple-light rounded-lg p-6 mb-8">
       <div className="flex items-center gap-2 mb-4">
-        <BookOpen className="w-5 h-5 text-fontur-purple dark:text-fontur-purple-light" />
+        <BookOpen className="w-5 h-5 text-ocupapp-purple dark:text-ocupapp-purple-light" />
         <h2 className={`text-xl font-semibold ${carbon.textPrimary}`}>
           Indice
         </h2>
@@ -47,7 +47,7 @@ export function TableOfContents({ items }: TableOfContentsProps) {
           >
             <button
               onClick={() => scrollToSection(item.id)}
-              className="text-left text-fontur-purple dark:text-fontur-purple-light hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors w-full"
+              className="text-left text-ocupapp-purple dark:text-ocupapp-purple-light hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors w-full"
             >
               {item.title}
             </button>
