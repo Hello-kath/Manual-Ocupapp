@@ -6,7 +6,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { LogIn, LogOut, CircleCheck, TriangleAlert, Info } from 'lucide-react';
+import { LogIn, CircleCheck, TriangleAlert, Info } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import { ManualImage } from '@/components/manual/ManualImage';
 import { RoleAccess } from '@/components/manual/RoleAccess';
@@ -28,7 +28,7 @@ export function LoginSection() {
 
             <RoleAccess
               roles={['admin', 'asignador', 'colaborador']}
-              note="El inicio de sesión es el mismo para los tres roles. Lo que cambia es lo que ves DESPUÉS de entrar: el menú lateral y las pantallas disponibles se arman automáticamente según tu rol."
+              note="El inicio de sesión es el mismo para los tres roles. Lo que cambia es lo que ves DESPUÉS de entrar: el menú lateral y los módulos disponibles se arman automáticamente según tu rol."
             />
 
             <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-ocupapp-purple dark:border-ocupapp-purple-light p-4">
@@ -47,16 +47,16 @@ export function LoginSection() {
               <h3 className={`text-xl font-semibold ${carbon.textPrimary} mb-4 flex items-center gap-2`}>
                 <span className="bg-ocupapp-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-sm">1</span>
                 <LogIn className="w-5 h-5" />
-                Pantalla de inicio de sesión
+                Inicio de sesión
               </h3>
               <p className={`${carbon.textPrimary} mb-4`}>
-                Al abrir Ocupapp se muestra la pantalla de acceso con el botón
+                Al abrir Ocupapp se muestra el acceso con el botón
                 <strong> &quot;Iniciar sesión con Google&quot;</strong>. Haz clic en él para comenzar.
               </p>
               <ManualImage
                 src="/manuales/ocupapp/login/1.pantalla-login.png"
-                alt="Pantalla principal de inicio de sesión de Ocupapp"
-                caption="Pantalla de inicio de sesión"
+                alt="Vista de inicio de sesión de Ocupapp"
+                caption="Inicio de sesión"
               />
             </div>
 
@@ -117,28 +117,17 @@ export function LoginSection() {
                   </div>
                 </div>
               </div>
-              <ManualImage
-                src="/manuales/ocupapp/login/4.error-acceso.png"
-                alt="Mensaje de error al intentar ingresar con una cuenta no autorizada"
-                caption="Mensaje de error de acceso"
-              />
-            </div>
-
-            {/* Paso 5 - Cerrar sesión */}
-            <div>
-              <h3 className={`text-xl font-semibold ${carbon.textPrimary} mb-4 flex items-center gap-2`}>
-                <span className="bg-ocupapp-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-sm">5</span>
-                <LogOut className="w-5 h-5" />
-                Cerrar sesión
-              </h3>
               <p className={`${carbon.textPrimary} mb-4`}>
-                Desde el menú de usuario puedes <strong>cerrar sesión</strong>. Esto limpia tu sesión
-                del dispositivo y te devuelve a la pantalla de inicio de sesión.
+                En ese caso se muestra la pantalla <strong>&quot;Acceso Denegado&quot;</strong>, con la
+                opción <strong>&quot;Contactar Soporte&quot;</strong> para pedir ayuda y
+                <strong> &quot;Volver al inicio&quot;</strong> para regresar al inicio de sesión.
               </p>
               <ManualImage
-                src="/manuales/ocupapp/login/5.cerrar-sesion.png"
-                alt="Opción de cerrar sesión en el menú de usuario"
-                caption="Cerrar sesión"
+                src="/manuales/ocupapp/login/4.error-acceso.png"
+                alt="Pantalla de Acceso Denegado al ingresar con una cuenta no autorizada"
+                caption="Acceso Denegado"
+                width={360}
+                height={415}
               />
             </div>
 

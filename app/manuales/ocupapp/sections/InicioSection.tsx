@@ -36,7 +36,7 @@ export function InicioSection() {
                 <strong>Página de Inicio</strong>
               </p>
               <p className={`text-sm ${carbon.textPrimary}`}>
-                El Dashboard es la primera pantalla tras iniciar sesión. Muestra tarjetas con
+                El Dashboard es lo primero que ves tras iniciar sesión. Muestra tarjetas con
                 información del usuario y accesos a los módulos. La navegación principal está en el
                 <strong> menú lateral izquierdo</strong>.
               </p>
@@ -94,7 +94,7 @@ export function InicioSection() {
                   </table>
                 </div>
               </div>
-              <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4 mb-4">
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 p-4">
                 <div className="flex items-start gap-2">
                   <Info className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
                   <p className={`text-sm ${carbon.textPrimary}`}>
@@ -103,11 +103,6 @@ export function InicioSection() {
                   </p>
                 </div>
               </div>
-              <ManualImage
-                src="/manuales/ocupapp/inicio/2.menu-lateral-roles.png"
-                alt="Menú lateral mostrando distintos módulos según el rol"
-                caption="Menú lateral filtrado por rol"
-              />
             </div>
 
           </section>

@@ -27,7 +27,7 @@ export function ManualImage({
 
   const filename = src.split('/').pop();
   const isDefaultSize = width === 800 && height === 600;
-  const imageClassName = isDefaultSize ? 'w-full h-auto' : 'h-auto';
+  const imageClassName = isDefaultSize ? 'w-full h-auto' : 'h-auto mx-auto';
 
   return (
     <figure className="my-6">
