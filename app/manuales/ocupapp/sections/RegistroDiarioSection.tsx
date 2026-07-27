@@ -27,8 +27,8 @@ export function RegistroDiarioSection() {
           <section id="registro-diario" className="space-y-8 pt-4">
 
             <RoleAccess
-              roles={['admin', 'asignador', 'colaborador']}
-              note="Es la vista principal del Colaborador para registrar sus horas reales por día. El módulo funciona igual para el Administrador (misma interfaz y mismo flujo); la lista de proyectos depende de tener proyectos asignados en una semana finalizada."
+              roles={['admin', 'colaborador']}
+              note="Es la vista principal del Colaborador para registrar sus horas reales por día. El Administrador también tiene acceso (misma interfaz y mismo flujo). El Asignador NO ve este módulo. La lista de proyectos depende de tener proyectos asignados en una semana finalizada."
             />
 
             <div className="bg-purple-50 dark:bg-purple-900/20 border-l-4 border-ocupapp-purple dark:border-ocupapp-purple-light p-4">
