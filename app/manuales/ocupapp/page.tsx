@@ -1,8 +1,14 @@
 'use client';
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 import { OcupappManualLayout } from '@/components/layout/OcupappManualLayout';
 import { TableOfContents } from '@/components/manual/TableOfContents';
-import { Layers } from 'lucide-react';
+import { Layers, ShieldCheck, CalendarRange, User } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import { LoginSection } from './sections/LoginSection';
 import { InicioSection } from './sections/InicioSection';
@@ -11,23 +17,44 @@ import { ProyectosSection } from './sections/ProyectosSection';
 import { ColaboradoresSection } from './sections/ColaboradoresSection';
 import { AsignacionSection } from './sections/AsignacionSection';
 import { RegistroDiarioSection } from './sections/RegistroDiarioSection';
+import { ProyectosAsignadorSection } from './sections/ProyectosAsignadorSection';
+import { AsignacionAsignadorSection } from './sections/AsignacionAsignadorSection';
 import { ProyectosAsignadosSection } from './sections/ProyectosAsignadosSection';
 import { PerfilSection } from './sections/PerfilSection';
 
 const tocItems = [
-  { id: 'login', title: 'Inicio de Sesión', level: 2 },
-  { id: 'inicio', title: 'Inicio (Dashboard)', level: 2 },
-  { id: 'clientes', title: 'Clientes', level: 2 },
-  { id: 'proyectos', title: 'Proyectos', level: 2 },
-  { id: 'colaboradores', title: 'Colaboradores', level: 2 },
-  { id: 'asignacion', title: 'Asignación Semanal', level: 2 },
-  { id: 'registro-diario', title: 'Registro Diario', level: 2 },
-  { id: 'proyectos-asignados', title: 'Proyectos Asignados', level: 2 },
-  { id: 'perfil', title: 'Perfil', level: 2 },
+  { id: 'grupo-comun', title: 'Vista General', level: 1 },
+  { id: 'login', title: 'Inicio de Sesión', level: 2, parent: 'grupo-comun' },
+  { id: 'inicio', title: 'Inicio (Dashboard)', level: 2, parent: 'grupo-comun' },
+  { id: 'grupo-admin', title: 'Administrador', level: 1 },
+  { id: 'clientes', title: 'Clientes', level: 2, parent: 'grupo-admin' },
+  { id: 'colaboradores', title: 'Colaboradores', level: 2, parent: 'grupo-admin' },
+  { id: 'proyectos', title: 'Proyectos', level: 2, parent: 'grupo-admin' },
+  { id: 'asignacion', title: 'Asignación Semanal', level: 2, parent: 'grupo-admin' },
+  { id: 'registro-diario', title: 'Registro Diario', level: 2, parent: 'grupo-admin' },
+  { id: 'grupo-asignador', title: 'Asignador', level: 1 },
+  { id: 'proyectos-asignador', title: 'Proyectos', level: 2, parent: 'grupo-asignador' },
+  { id: 'asignacion-asignador', title: 'Asignación Semanal', level: 2, parent: 'grupo-asignador' },
+  { id: 'grupo-colaborador', title: 'Colaborador', level: 1 },
+  { id: 'registro-diario-colab', title: 'Registro Diario', level: 2, parent: 'grupo-colaborador' },
+  { id: 'proyectos-asignados', title: 'Proyectos Asignados', level: 2, parent: 'grupo-colaborador' },
+  { id: 'perfil', title: 'Perfil', level: 2, parent: 'grupo-colaborador' },
 ];
 
 export default function OcupappManual() {
   const carbon = useCarbonClasses();
+
+  const roleTrigger = (icon: React.ReactNode, title: string, description: string) => (
+    <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
+      <span className="flex items-center gap-3 text-left">
+        {icon}
+        <span>
+          <span className="block">{title}</span>
+          <span className={`block text-xs font-normal ${carbon.textHelper} mt-0.5`}>{description}</span>
+        </span>
+      </span>
+    </AccordionTrigger>
+  );
 
   return (
     <OcupappManualLayout>
@@ -49,8 +76,8 @@ export default function OcupappManual() {
           <strong>Roles del sistema:</strong> Administrador, Asignador y Colaborador
         </p>
         <p className={`${carbon.textPrimary} text-sm`}>
-          <strong>Módulos:</strong> Inicio de Sesión, Dashboard, Clientes, Proyectos,
-          Colaboradores, Asignación Semanal, Registro Diario, Proyectos Asignados, Perfil
+          <strong>Organización:</strong> este manual está separado por rol. Abre el bloque de tu rol para
+          ver sus módulos; dentro, cada módulo también se abre y se cierra.
         </p>
       </div>
 
@@ -66,23 +93,87 @@ export default function OcupappManual() {
           <strong>Cómo leer este manual</strong>
         </p>
         <p className={`text-sm ${carbon.textPrimary}`}>
-          Cada sección indica, con etiquetas de color, <strong>qué roles pueden acceder</strong> a esa
-          vista y <strong>cómo cambia lo que ve cada rol</strong>. Ten en cuenta que el menú lateral y
-          las rutas se filtran por rol: un rol solo ve en su menú los módulos a los que tiene acceso.
+          Ubica tu <strong>rol</strong> (Administrador, Asignador o Colaborador) y abre su bloque; lo
+          <strong> común a todos</strong> aplica sin importar el rol. El menú lateral y las rutas se filtran
+          por rol: cada persona solo ve los módulos a los que tiene acceso.
         </p>
       </div>
 
       <TableOfContents items={tocItems} />
 
-      <div id="anchor-login"><LoginSection /></div>
-      <div id="anchor-inicio"><InicioSection /></div>
-      <div id="anchor-clientes"><ClientesSection /></div>
-      <div id="anchor-proyectos"><ProyectosSection /></div>
-      <div id="anchor-colaboradores"><ColaboradoresSection /></div>
-      <div id="anchor-asignacion"><AsignacionSection /></div>
-      <div id="anchor-registro-diario"><RegistroDiarioSection /></div>
-      <div id="anchor-proyectos-asignados"><ProyectosAsignadosSection /></div>
-      <div id="anchor-perfil"><PerfilSection /></div>
+      <Accordion type="multiple" defaultValue={['grupo-comun']} className="space-y-4">
+        {/* ===================== COMÚN A TODOS ===================== */}
+        <AccordionItem
+          value="grupo-comun"
+          id="anchor-grupo-comun"
+          className="border-l-4 border-gray-400 dark:border-gray-500 pl-4"
+        >
+          {roleTrigger(
+            <Layers className="w-7 h-7 text-gray-500 dark:text-gray-400 shrink-0" />,
+            'Vista General',
+            'Aplica a todos los roles (Administrador, Asignador y Colaborador).',
+          )}
+          <AccordionContent>
+            <div id="anchor-login"><LoginSection /></div>
+            <div id="anchor-inicio"><InicioSection /></div>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* ===================== ADMINISTRADOR ===================== */}
+        <AccordionItem
+          value="grupo-admin"
+          id="anchor-grupo-admin"
+          className="border-l-4 border-ocupapp-purple dark:border-ocupapp-purple-light pl-4"
+        >
+          {roleTrigger(
+            <ShieldCheck className="w-7 h-7 text-ocupapp-purple dark:text-ocupapp-purple-light shrink-0" />,
+            'Administrador',
+            'Acceso total: clientes, colaboradores, proyectos, planificación semanal y registro diario.',
+          )}
+          <AccordionContent>
+            <div id="anchor-clientes"><ClientesSection /></div>
+            <div id="anchor-colaboradores"><ColaboradoresSection /></div>
+            <div id="anchor-proyectos"><ProyectosSection /></div>
+            <div id="anchor-asignacion"><AsignacionSection /></div>
+            <div id="anchor-registro-diario"><RegistroDiarioSection /></div>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* ===================== ASIGNADOR ===================== */}
+        <AccordionItem
+          value="grupo-asignador"
+          id="anchor-grupo-asignador"
+          className="border-l-4 border-blue-500 dark:border-blue-400 pl-4"
+        >
+          {roleTrigger(
+            <CalendarRange className="w-7 h-7 text-blue-600 dark:text-blue-400 shrink-0" />,
+            'Asignador',
+            'Consulta proyectos y planifica la semana. No gestiona clientes, colaboradores ni registra horas.',
+          )}
+          <AccordionContent>
+            <div id="anchor-proyectos-asignador"><ProyectosAsignadorSection /></div>
+            <div id="anchor-asignacion-asignador"><AsignacionAsignadorSection /></div>
+          </AccordionContent>
+        </AccordionItem>
+
+        {/* ===================== COLABORADOR ===================== */}
+        <AccordionItem
+          value="grupo-colaborador"
+          id="anchor-grupo-colaborador"
+          className="border-l-4 border-green-500 dark:border-green-400 pl-4"
+        >
+          {roleTrigger(
+            <User className="w-7 h-7 text-green-600 dark:text-green-400 shrink-0" />,
+            'Colaborador',
+            'Registra sus horas, consulta sus proyectos asignados y su historial, y gestiona su perfil.',
+          )}
+          <AccordionContent>
+            <div id="anchor-registro-diario-colab"><RegistroDiarioSection anchor="registro-diario-colab" /></div>
+            <div id="anchor-proyectos-asignados"><ProyectosAsignadosSection /></div>
+            <div id="anchor-perfil"><PerfilSection /></div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
 
       <div className={`${carbon.layer01} p-4 mt-8 border-t ${carbon.border}`}>
         <p className={`text-sm ${carbon.textHelper} text-center`}>

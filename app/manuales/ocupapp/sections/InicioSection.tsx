@@ -88,8 +88,7 @@ export function InicioSection() {
                       <tr className={`border-b ${carbon.borderSubtle}`}><td className="py-2 pr-4">Proyectos</td><td>✅</td><td>✅</td><td>—</td></tr>
                       <tr className={`border-b ${carbon.borderSubtle}`}><td className="py-2 pr-4">Asignación Semanal</td><td>✅</td><td>✅</td><td>—</td></tr>
                       <tr className={`border-b ${carbon.borderSubtle}`}><td className="py-2 pr-4">Registro Diario</td><td>✅</td><td>—</td><td>✅</td></tr>
-                      <tr className={`border-b ${carbon.borderSubtle}`}><td className="py-2 pr-4">Perfil</td><td>—</td><td>—</td><td>✅</td></tr>
-                      <tr><td className="py-2 pr-4">Configuración</td><td>✅</td><td>—</td><td>—</td></tr>
+                      <tr><td className="py-2 pr-4">Perfil</td><td>—</td><td>—</td><td>✅</td></tr>
                     </tbody>
                   </table>
                 </div>

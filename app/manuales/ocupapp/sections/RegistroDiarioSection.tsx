@@ -11,12 +11,12 @@ import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import { ManualImage } from '@/components/manual/ManualImage';
 import { RoleAccess } from '@/components/manual/RoleAccess';
 
-export function RegistroDiarioSection() {
+export function RegistroDiarioSection({ anchor = 'registro-diario' }: { anchor?: string } = {}) {
   const carbon = useCarbonClasses();
 
   return (
     <Accordion type="single" collapsible className="mb-6">
-      <AccordionItem value="registro-diario">
+      <AccordionItem value={anchor}>
         <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
           <div className="flex items-center gap-3">
             <ClipboardList className="w-6 h-6 text-ocupapp-purple dark:text-ocupapp-purple-light" />
@@ -24,7 +24,7 @@ export function RegistroDiarioSection() {
           </div>
         </AccordionTrigger>
         <AccordionContent>
-          <section id="registro-diario" className="space-y-8 pt-4">
+          <section id={anchor} className="space-y-8 pt-4">
 
             <RoleAccess
               roles={['admin', 'colaborador']}

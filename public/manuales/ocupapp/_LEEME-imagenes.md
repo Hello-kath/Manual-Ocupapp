@@ -55,6 +55,23 @@ Leyenda: ✅ = ya cargada · ⬜ = pendiente de capturar.
 - ✅ `6.crear-semana-auditoria.png` — Crear siguiente semana + Auditoría de Desbloqueos (solo admin)
 - ✅ `7.festivos.png` — Festivos nacionales / sincronizar (solo admin)
 
+### proyectos-asignador/  (rol: Asignador — vista propia del asignador)
+- ✅ `1.lista-proyectos.png` — lista de proyectos (vista Asignador, sin botón Nuevo)
+- ✅ `2.filtros.png` — panel de filtros
+- ✅ `3.asignar-colaborador.png` — modal Asignar Colaboradores
+- ✅ `4.asignacion-exito.png` — mensaje de éxito de asignación
+- ✅ `5.cambiar-estado.png` — cambiar estado desde la tabla
+- ✅ `6.detalle-proyecto.png` — detalle del proyecto
+- ✅ `7.asignar-desde-detalle.png` — agregar colaborador desde el detalle
+
+### asignacion-asignador/  (rol: Asignador — vista propia del asignador)
+- ✅ `1.panel-planificacion.png` — Panel de Planificación (sin Festivos)
+- ✅ `2.semana-en-curso.png` — cuadrante de la semana en curso
+- ✅ `3.planificacion-semanal.png` — Planificación Semanal Masiva (sin horas extra)
+- ✅ `4.comparativa-semanal.png` — Comparativa de la semana en curso
+- ✅ `5.historial-planificaciones.png` — Historial de Planificaciones (sin desbloqueo/auditoría)
+- ✅ `6.crear-siguiente-semana.png` — crear la siguiente semana
+
 ### registro-diario/  (rol principal: Colaborador; igual para Administrador)
 - ✅ `1.registro-sin-datos.png` — vista inicial sin registros
 - ✅ `2.seleccionar-proyecto.png` — selección de proyecto
