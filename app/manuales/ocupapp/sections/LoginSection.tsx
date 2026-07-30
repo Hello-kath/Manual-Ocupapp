@@ -6,24 +6,15 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { LogIn, CircleCheck, TriangleAlert, Info } from 'lucide-react';
+import { LogIn, TriangleAlert, Info } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import { ManualImage } from '@/components/manual/ManualImage';
 import { RoleAccess } from '@/components/manual/RoleAccess';
 
-export function LoginSection() {
+export function LoginSection({ embedded = false }: { embedded?: boolean }) {
   const carbon = useCarbonClasses();
 
-  return (
-    <Accordion type="single" collapsible className="mb-6">
-      <AccordionItem value="login">
-        <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
-          <div className="flex items-center gap-3">
-            <LogIn className="w-6 h-6 text-ocupapp-purple dark:text-ocupapp-purple-light" />
-            <span>Inicio de Sesión</span>
-          </div>
-        </AccordionTrigger>
-        <AccordionContent>
+  const content = (
           <section id="login" className="space-y-8 pt-4">
 
             <RoleAccess
@@ -79,28 +70,10 @@ export function LoginSection() {
               />
             </div>
 
-            {/* Paso 3 - Acceso exitoso */}
+            {/* Paso 3 - Errores de acceso */}
             <div>
               <h3 className={`text-xl font-semibold ${carbon.textPrimary} mb-4 flex items-center gap-2`}>
                 <span className="bg-ocupapp-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-sm">3</span>
-                <CircleCheck className="w-5 h-5" />
-                Acceso exitoso
-              </h3>
-              <p className={`${carbon.textPrimary} mb-4`}>
-                Tras validar la cuenta, el sistema te redirige al <strong>Dashboard (Inicio)</strong>.
-                El menú lateral aparece con solo los módulos permitidos para tu rol.
-              </p>
-              <ManualImage
-                src="/manuales/ocupapp/login/3.acceso-exitoso.png"
-                alt="Redirección al dashboard tras un inicio de sesión exitoso"
-                caption="Acceso exitoso — redirección al Dashboard"
-              />
-            </div>
-
-            {/* Paso 4 - Errores de acceso */}
-            <div>
-              <h3 className={`text-xl font-semibold ${carbon.textPrimary} mb-4 flex items-center gap-2`}>
-                <span className="bg-ocupapp-purple text-white rounded-full w-8 h-8 flex items-center justify-center text-sm">4</span>
                 <TriangleAlert className="w-5 h-5" />
                 Errores de acceso
               </h3>
@@ -132,7 +105,20 @@ export function LoginSection() {
             </div>
 
           </section>
-        </AccordionContent>
+  );
+
+  if (embedded) return content;
+
+  return (
+    <Accordion type="single" collapsible className="mb-6">
+      <AccordionItem value="login">
+        <AccordionTrigger className={`text-2xl font-bold ${carbon.textPrimary}`}>
+          <div className="flex items-center gap-3">
+            <LogIn className="w-6 h-6 text-ocupapp-purple dark:text-ocupapp-purple-light" />
+            <span>Inicio de Sesión</span>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>{content}</AccordionContent>
       </AccordionItem>
     </Accordion>
   );

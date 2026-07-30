@@ -11,7 +11,7 @@ import { TableOfContents } from '@/components/manual/TableOfContents';
 import { Layers, ShieldCheck, CalendarRange, User } from 'lucide-react';
 import { useCarbonClasses } from '@/hooks/useCarbonClasses';
 import { LoginSection } from './sections/LoginSection';
-import { InicioSection } from './sections/InicioSection';
+import { HomeSection } from './sections/HomeSection';
 import { ClientesSection } from './sections/ClientesSection';
 import { ProyectosSection } from './sections/ProyectosSection';
 import { ColaboradoresSection } from './sections/ColaboradoresSection';
@@ -23,19 +23,21 @@ import { ProyectosAsignadosSection } from './sections/ProyectosAsignadosSection'
 import { PerfilSection } from './sections/PerfilSection';
 
 const tocItems = [
-  { id: 'grupo-comun', title: 'Vista General', level: 1 },
+  { id: 'grupo-comun', title: 'Inicio de Sesión', level: 1 },
   { id: 'login', title: 'Inicio de Sesión', level: 2, parent: 'grupo-comun' },
-  { id: 'inicio', title: 'Inicio (Dashboard)', level: 2, parent: 'grupo-comun' },
   { id: 'grupo-admin', title: 'Administrador', level: 1 },
+  { id: 'home-admin', title: 'Home del Administrador', level: 2, parent: 'grupo-admin' },
   { id: 'clientes', title: 'Clientes', level: 2, parent: 'grupo-admin' },
   { id: 'colaboradores', title: 'Colaboradores', level: 2, parent: 'grupo-admin' },
   { id: 'proyectos', title: 'Proyectos', level: 2, parent: 'grupo-admin' },
   { id: 'asignacion', title: 'Asignación Semanal', level: 2, parent: 'grupo-admin' },
   { id: 'registro-diario', title: 'Registro Diario', level: 2, parent: 'grupo-admin' },
   { id: 'grupo-asignador', title: 'Asignador', level: 1 },
+  { id: 'home-asignador', title: 'Home del Asignador', level: 2, parent: 'grupo-asignador' },
   { id: 'proyectos-asignador', title: 'Proyectos', level: 2, parent: 'grupo-asignador' },
   { id: 'asignacion-asignador', title: 'Asignación Semanal', level: 2, parent: 'grupo-asignador' },
   { id: 'grupo-colaborador', title: 'Colaborador', level: 1 },
+  { id: 'home-colaborador', title: 'Home del Colaborador', level: 2, parent: 'grupo-colaborador' },
   { id: 'registro-diario-colab', title: 'Registro Diario', level: 2, parent: 'grupo-colaborador' },
   { id: 'proyectos-asignados', title: 'Proyectos Asignados', level: 2, parent: 'grupo-colaborador' },
   { id: 'perfil', title: 'Perfil', level: 2, parent: 'grupo-colaborador' },
@@ -110,12 +112,11 @@ export default function OcupappManual() {
         >
           {roleTrigger(
             <Layers className="w-7 h-7 text-gray-500 dark:text-gray-400 shrink-0" />,
-            'Vista General',
-            'Aplica a todos los roles (Administrador, Asignador y Colaborador).',
+            'Inicio de Sesión',
+            'Cómo ingresar a Ocupapp con tu cuenta de Google.',
           )}
           <AccordionContent>
-            <div id="anchor-login"><LoginSection /></div>
-            <div id="anchor-inicio"><InicioSection /></div>
+            <div id="anchor-login"><LoginSection embedded /></div>
           </AccordionContent>
         </AccordionItem>
 
@@ -131,6 +132,7 @@ export default function OcupappManual() {
             'Acceso total: clientes, colaboradores, proyectos, planificación semanal y registro diario.',
           )}
           <AccordionContent>
+            <div id="anchor-home-admin"><HomeSection role="admin" /></div>
             <div id="anchor-clientes"><ClientesSection /></div>
             <div id="anchor-colaboradores"><ColaboradoresSection /></div>
             <div id="anchor-proyectos"><ProyectosSection /></div>
@@ -151,6 +153,7 @@ export default function OcupappManual() {
             'Consulta proyectos y planifica la semana. No gestiona clientes, colaboradores ni registra horas.',
           )}
           <AccordionContent>
+            <div id="anchor-home-asignador"><HomeSection role="asignador" /></div>
             <div id="anchor-proyectos-asignador"><ProyectosAsignadorSection /></div>
             <div id="anchor-asignacion-asignador"><AsignacionAsignadorSection /></div>
           </AccordionContent>
@@ -168,6 +171,7 @@ export default function OcupappManual() {
             'Registra sus horas, consulta sus proyectos asignados y su historial, y gestiona su perfil.',
           )}
           <AccordionContent>
+            <div id="anchor-home-colaborador"><HomeSection role="colaborador" /></div>
             <div id="anchor-registro-diario-colab"><RegistroDiarioSection anchor="registro-diario-colab" /></div>
             <div id="anchor-proyectos-asignados"><ProyectosAsignadosSection /></div>
             <div id="anchor-perfil"><PerfilSection /></div>

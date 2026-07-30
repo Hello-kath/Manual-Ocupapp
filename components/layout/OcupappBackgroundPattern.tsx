@@ -11,11 +11,11 @@ export function OcupappBackgroundPattern() {
       <img
         src="/tbbc-logo.png"
         alt="Ocupapp"
+        className="hidden 2xl:block w-40"
         style={{
           position: 'fixed',
           bottom: '5%',
           right: '5%',
-          width: '220px',
           height: 'auto',
           opacity: isDarkMode ? 0.12 : 0.35,
           animation: 'breatheLogo 4s ease-in-out infinite',

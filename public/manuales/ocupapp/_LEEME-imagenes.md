@@ -12,11 +12,14 @@ Leyenda: ✅ = ya cargada · ⬜ = pendiente de capturar.
 ### login/
 - ✅ `1.pantalla-login.png` — pantalla de inicio de sesión
 - ✅ `2.seleccionar-cuenta-google.png` — ventana de Google
-- ✅ `3.acceso-exitoso.png` — redirección al dashboard (Home)
-- ✅ `4.error-acceso.png` — pantalla "Acceso Denegado" (cuenta no autorizada)
+- ✅ `4.error-acceso.png` — "Acceso Denegado" (cuenta no autorizada)
 
-### inicio/
-- ✅ `1.dashboard-general.png` — dashboard general (pantalla de bienvenida "Inicio")
+### inicio/  (Home + Anuncios)
+- ✅ `1.home-admin.png` — Home del Administrador/Asignador (botón Crear + editar/eliminar)
+- ✅ `2.crear-anuncio.png` — formulario Nuevo Anuncio (con vista previa)
+- ✅ `3.editar-anuncio.png` — formulario Editar Anuncio
+- ✅ `4.sin-anuncios.png` — Home sin anuncios (estado vacío)
+- ✅ `5.home-colaborador.png` — Home del Colaborador (solo ve los anuncios)
 
 ### proyectos/  (roles: Administrador y Asignador — mismo módulo, permisos distintos)
 - ✅ `1.lista-proyectos.png` — Gestión de Proyectos (lista)
